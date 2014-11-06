@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Recipes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A56EFBD91A0B90020034D8FD"
+               BuildableName = "Recipes Tests.xctest"
+               BlueprintName = "Recipes Tests"
+               ReferencedContainer = "container:Recipes.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,6 +42,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A56EFBD91A0B90020034D8FD"
+               BuildableName = "Recipes Tests.xctest"
+               BlueprintName = "Recipes Tests"
+               ReferencedContainer = "container:Recipes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
