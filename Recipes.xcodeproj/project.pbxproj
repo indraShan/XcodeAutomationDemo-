@@ -439,6 +439,7 @@
 				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Recipes;
+				PROVISIONING_PROFILE = "ec7725c3-fd1c-404c-bedb-9ed3fd4d4c35";
 			};
 			name = Debug;
 		};
@@ -455,6 +456,7 @@
 				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Recipes;
+				PROVISIONING_PROFILE = "ec7725c3-fd1c-404c-bedb-9ed3fd4d4c35";
 			};
 			name = Release;
 		};
@@ -493,6 +495,7 @@
 				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Recipes;
+				PROVISIONING_PROFILE = "ec7725c3-fd1c-404c-bedb-9ed3fd4d4c35";
 			};
 			name = TestflightWithDevCerts;
 		};
