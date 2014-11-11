@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0610"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -104,25 +104,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "TestflightWithDevCerts"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
-      <PostActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "set&#10;API_TOKEN=&quot;5257a93e3269915e4a993eb5e4aae2b9_MTI3MjczMTIwMTMtMDgtMzAgMTA6NTY6NDQuNTg1NzMx&quot;&#10;TEAM_TOKEN=&quot;1f2d303016f32e834a80ba214f9d548c_NDU5MTgwMjAxNC0xMS0xMSAwNzozOToxNC4wNjMyNjk&quot;&#10;DISTRIBUTION_LISTS=&quot;XcodeIntegrationDemo_RSL_Test_Team&quot;&#10;PROVISIONING_PROFILE=&quot;/Library/MobileDevice/Provisioning Profiles/XcodeIntegrationDemoAppDevProfileRSL.mobileprovision&quot;&#10;SIGNING_IDENTITY=&quot;iPhone Developer: Raja Venkataraman (3VEW56MJY4)&quot;&#10;&#10;ARCHIVES_FOLDER=&quot;/Users/rajasoftwarelabs/Library/Developer/Xcode/Archives/$(ls -t /Users/rajasoftwarelabs/Library/Developer/Xcode/Archives | head -n1)&quot;&#10;&#10;LS=&quot;$(ls)&quot;&#10;&#10;echo &apos;LS = &apos;$LS&apos;&apos;&#10;&#10;echo &apos;ARCHIVES_FOLDER = &apos;$ARCHIVES_FOLDER&apos;&apos;&#10;&#10;CURRENT_ARCHIVE=&quot;${ARCHIVES_FOLDER}/$(ls -t ${ARCHIVES_FOLDER} | head -n1)&quot;&#10;&#10;echo &apos;CURRENT_ARCHIVE = &apos;$CURRENT_ARCHIVE&apos;&apos;&#10;&#10;DSYM=&quot;${CURRENT_ARCHIVE}/dSYMs/${PRODUCT_NAME}.app.dSYM&quot;&#10;&#10;echo &apos;DSYM = &apos;$DSYM&apos;&apos;&#10;&#10;IPA=&quot;/tmp/${PRODUCT_NAME}.ipa&quot;&#10;&#10;APP=&quot;/tmp/Archive.xcarchive/Products/Applications/${PRODUCT_NAME}.app&quot;&#10;&#10;# Clear out any old copies of the Archive&#10;echo &quot;Removing old Archive files from /tmp...&quot;;&#10;/bin/rm -rf /tmp/Archive.xcarchive*&#10;&#10;#Copy over the latest build the bot just created&#10;echo &quot;Copying latest Archive to /tmp/...&quot;;&#10;LATESTBUILD=$(ls -1rt /Library/Server/Xcode/Data/BotRuns | tail -1)&#10;/bin/cp -Rp &quot;/Library/Server/Xcode/Data/BotRuns/${LATESTBUILD}/output/Archive.xcarchive&quot; &quot;/tmp/&quot;&#10;&#10;echo &quot;Creating .ipa for ${PRODUCT_NAME}&quot;&#10;/bin/rm &quot;${IPA}&quot;&#10;/usr/bin/xcrun -sdk iphoneos PackageApplication -v &quot;${APP}&quot; -o &quot;${IPA}&quot; --sign &quot;${SIGNING_IDENTITY}&quot; --embed &quot;${PROVISIONING_PROFILE}&quot;&#10;&#10;echo &quot;Done with IPA creation.&quot;&#10;&#10;echo &quot;Zipping .dSYM for ${PRODUCT_NAME}&quot;&#10;/bin/rm &quot;${DSYM}.zip&quot;&#10;/usr/bin/zip -r &quot;${DSYM}.zip&quot; &quot;${DSYM}&quot;&#10;&#10;echo &quot;Created .dSYM for ${PRODUCT_NAME}&quot;&#10;&#10;echo &quot;*** Uploading ${PRODUCT_NAME} to TestFlight ***&quot;&#10;/usr/bin/curl &quot;http://testflightapp.com/api/builds.json&quot; \&#10;-F file=@&quot;${IPA}&quot; \&#10;-F dsym=@&quot;${DSYM}.zip&quot; \&#10;-F api_token=&quot;${API_TOKEN}&quot; \&#10;-F team_token=&quot;${TEAM_TOKEN}&quot; \&#10;-F distribution_lists=&quot;${DISTRIBUTION_LISTS}&quot; \&#10;-F notes=&quot;Build uploaded automatically from Xcode Server Bot.&quot;&#10;&#10;echo &quot;TestFlight upload finished!&quot;&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-                     BuildableName = "Recipes.app"
-                     BlueprintName = "Recipes"
-                     ReferencedContainer = "container:Recipes.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PostActions>
    </ArchiveAction>
 </Scheme>
